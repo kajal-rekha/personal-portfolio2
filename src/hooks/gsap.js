@@ -83,7 +83,7 @@ export const useSocialReveal = (el, delay = 0) => {
     gsap.fromTo(
       el.current,
       {
-        x: -500,
+        x: 500,
       },
       {
         x: 0,
@@ -136,41 +136,6 @@ export const useProjectLeftRightReveal = (items, delay = 0) => {
   }, [items, delay]);
 };
 
-export const useSkillLineReveal = (items) => {
-  useEffect(() => {
-    items.forEach((el) =>
-      gsap.to(el, {
-        scrollTrigger: {
-          trigger: el,
-          onEnter() {
-            el.classList.add("reveal");
-          },
-        },
-      })
-    );
-  }, [items]);
-};
-
-export const useSkillTextReveal = (el) => {
-  useEffect(() => {
-    gsap.fromTo(
-      el,
-      {
-        y: 200,
-      },
-      {
-        y: 0,
-        duration: 1,
-        ease: "power4.out",
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: el,
-        },
-      },
-      [el]
-    );
-  });
-};
 export const useFooterReveal = (el) => {
   useEffect(() => {
     gsap.fromTo(

@@ -17,7 +17,7 @@ const Project = ({ project }) => {
         className="project-left xl:col-span-3 flex flex-col gap-10"
         ref={projectLeftRef}
       >
-        <span className="text-9xl text-white/20">
+        <span className="text-9xl text-white/20 project-id">
           {String(project.id).padStart(2, 0)}
         </span>
         <h3 className="uppercase text-5xl leading-relaxed text-cyan-400">

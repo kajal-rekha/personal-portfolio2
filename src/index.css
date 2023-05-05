@@ -1,19 +1,13 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "Cosi Azure";
-  src: url(./assets/fonts/CosiAzure-Bold.ttf);
-} */
-
-body {
-  font-family: "Roboto Condensed", sans-serif;
-}
 :root {
   --color-dark: #050505;
   --color-light: #f7f7f7;
@@ -58,8 +52,8 @@ html {
 body {
   background-color: var(--color-dark);
   color: var(--color-light);
-  font-family: "Michroma", sans-serif;
-  font-size: 1.5rem;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.8rem;
   line-height: 1.6;
   letter-spacing: 2px;
   word-spacing: 3px;
@@ -151,8 +145,8 @@ input[type="submit"] {
 .shutter {
   position: absolute;
   z-index: 100;
-  font-family: "Cosi Azure", sans-serif;
-  font-size: 10rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 11rem;
 }
 
 .shutter-left {
@@ -193,9 +187,13 @@ input[type="submit"] {
 }
 
 .section-title {
-  font-family: "Cosi Azure", sans-serif;
-  font-size: 10rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 11rem;
   line-height: 1;
+}
+
+.skills-text {
+  font-size: 10rem;
 }
 
 .skill-item {
@@ -232,8 +230,13 @@ input[type="submit"] {
 
 .skill-number {
   font-size: 5rem;
+  font-family: "Michroma", sans-serif;
 }
 
 .skill-name {
   font-size: 2rem;
+}
+
+.project-id {
+  font-family: "Michroma", sans-serif;
 }
