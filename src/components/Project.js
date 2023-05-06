@@ -61,7 +61,6 @@ const Project = ({ project }) => {
           )}
         </div>
       </div>
-
       <div
         className="project-right xl:col-span-2 xl:justify-self-end row-start-1 xl:row-auto"
         ref={projectRightRef}

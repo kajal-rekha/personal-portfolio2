@@ -136,6 +136,26 @@ export const useProjectLeftRightReveal = (items, delay = 0) => {
   }, [items, delay]);
 };
 
+export const useCardContainerReveal = (el, delay = 0) => {
+  useEffect(() => {
+    gsap.fromTo(
+      el.current,
+      {
+        y: 200,
+      },
+      {
+        y: 0,
+        duration: 1.5,
+        delay,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: el.current,
+        },
+      }
+    );
+  }, [el, delay]);
+};
+
 export const useFooterReveal = (el) => {
   useEffect(() => {
     gsap.fromTo(

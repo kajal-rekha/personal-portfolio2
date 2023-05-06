@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { useCardContainerReveal } from "../hooks/gsap";
 import SectionTitle from "./SectionTitle";
 
 const data = [
@@ -137,21 +139,27 @@ const data = [
 ];
 
 const Skills = () => {
+  const cardContainerRef = useRef(null);
+
+  useCardContainerReveal(cardContainerRef);
   return (
     <div className="skills container mx-auto mt-40" id="skills">
       <SectionTitle title={"Skills"} />
 
-      <div className="skills-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-5 sm:gap-14 mt-40 ">
+      <div
+        ref={cardContainerRef}
+        className="skills-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-5 sm:gap-14 mt-40 "
+      >
         {data.map((skill) => (
           <div
             key={skill.id}
-            className="skill flex flex-col gap-5  rounded-xl bg-gray-800 h-[35rem] overflow-hidden  hover:shadow-2xl  duration-300"
+            className="skill flex flex-col gap-5  rounded-xl bg-gray-900 h-[35rem] overflow-hidden  hover:shadow-2xl  duration-300"
           >
             <div className="img w-36 sm:w-20 mx-auto mt-10 rounded-full">
               <img src={skill.image} alt={skill.title} className="w-full" />
             </div>
             <div className="texts flex flex-col gap-2 p-5 overflow-hidden">
-              <span className="uppercase text-2xl font-semibold text-sky-500 text-center">
+              <span className="uppercase text-2xl font-semibold text-cyan-400 text-center">
                 {skill.title}
               </span>
               <p className="mt-5 text-center">{skill.description}</p>
